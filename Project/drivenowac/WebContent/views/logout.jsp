@@ -4,11 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert my dick here</title>
+<title>Insert title here</title>
 </head>
 <body>
 
-<h1>WELCOME</h1>
 </body>
-<a href="logout">logout</a>
 </html>

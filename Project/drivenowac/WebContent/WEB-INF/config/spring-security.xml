@@ -24,19 +24,19 @@
 		
 	</http>
 
-	 <authentication-manager>
+	 <!-- <authentication-manager>
           <authentication-provider>
              <jdbc-user-service data-source-ref="ds" authorities-by-username-query="SELECT email_id as username,'ROLE_ADMIN' as authority FROM admin WHERE email_id = ?"
                 users-by-username-query="SELECT email_id as username, password, '1' as enabled FROM admin WHERE email_id = ?"/>
           </authentication-provider>
-        </authentication-manager>
-      <!--    <authentication-manager>
+        </authentication-manager>-->
+         <authentication-manager>
 		<authentication-provider>
 			<user-service>
-				<user name="bajra" password="iamnali" authorities="ROLE_USER" />
-				<user name="suman" password="123456" authorities="ROLE_USER" />
+				<user name="bajra" password="iamnali" authorities="ROLE_ADMIN" />
+				<user name="suman" password="123456" authorities="ROLE_ADMIN" />
 			</user-service>
 		</authentication-provider>
-		</authentication-manager> -->
+		</authentication-manager> 
 
 </beans:beans>
