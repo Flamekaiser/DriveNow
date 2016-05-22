@@ -7,7 +7,10 @@
 
 	<http auto-config="true">
 		<intercept-url pattern="/loginPage*" access="permitAll"/>
-		<intercept-url pattern="/Resource*" access="permitAll"/>
+		<intercept-url pattern="/bootstrap/**" access="permitAll"/>
+		<intercept-url pattern="/dist/**" access="permitAll"/>
+		<intercept-url pattern="/plugins/**" access="permitAll"/>
+		<intercept-url pattern="/resources/**" access="permitAll"/>
 		<intercept-url pattern="/**" access="hasRole('ROLE_ADMIN')" />
 		<intercept-url pattern="/welcome**" access="hasRole('ROLE_ADMIN')" />
 		
