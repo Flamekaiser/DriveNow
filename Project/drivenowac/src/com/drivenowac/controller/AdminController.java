@@ -17,7 +17,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 
 @Controller
-public class HotelController {
+public class AdminController {
 
 	@RequestMapping(value ={"/", "/welcome**"})
 	public ModelAndView welcomePage() {
