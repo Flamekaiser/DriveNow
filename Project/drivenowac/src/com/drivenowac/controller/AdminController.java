@@ -20,10 +20,10 @@ import org.springframework.web.servlet.ModelAndView;
 public class AdminController {
 
 	@RequestMapping(value ={"/", "/welcome**"})
-	public ModelAndView welcomePage() {
+	public ModelAndView welcomePage(@RequestParam(value="action",defaultValue = "None") String action) {
 		
 		ModelAndView model = new ModelAndView();
-		
+		model.addObject("action", action);	
 		model.setViewName("welcome");
 
 		return model;
