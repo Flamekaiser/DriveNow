@@ -29,6 +29,16 @@ public class AdminController {
 		return model;
 
 	}
+	@RequestMapping(value ={"addadmin"})
+	public ModelAndView AddAdmin(@RequestParam(value="action",defaultValue = "None") String action) {
+		
+		ModelAndView model = new ModelAndView();
+		model.addObject("action", action);	
+		model.setViewName("addadmin");
+
+		return model;
+
+	}
 	@RequestMapping(value ={"/loginPage"})
 	public ModelAndView loginPage() {
 		
