@@ -43,4 +43,29 @@ public class AdminDAOImpl implements AdminDAO {
 		return jdbcTemplate.queryForObject(sql, new Object[]{EmailId}, String.class);
 	}
 
+	@Override
+	public String CreateAdmin(Admin admin) {
+		String response = null;
+		String checkEmail="select count(id) from admin where email_id=?";
+		int checkEmailCount = jdbcTemplate.queryForInt(checkEmail, new Object[]{admin.getEmailId()});
+		if(checkEmailCount > 0){
+			response="ERR:EMAILEXISTS";
+		}
+		String checkPhone="select count(id) from admin where contact_no=?";
+		int checkPhoneCount = jdbcTemplate.queryForInt(checkPhone, new Object[]{admin.getContactNo()});
+		if(checkPhoneCount > 0){
+			response="ERR:PHONEEXISTS";
+		}
+		String sql = "insert into admin values(0,?,?,?,?,?)";
+		int createResponse = jdbcTemplate.update(sql, new Object[]{admin.getEmailId(),admin.getContactNo(),admin.getPassword(),admin.getFullName(),admin.getImageURL()});
+		if(createResponse == 1){
+			response="SUCCESS";
+		}
+		else{
+			response="ERR:FAILED";
+		}
+		
+		return response;
+	}
+
 }

@@ -42,4 +42,10 @@ public class AdminServiceImpl implements AdminService {
 		return adminDAO.getAdminNamebyEmailId(EmailId);
 	}
 
+	@Override
+	public String CreateAdmin(Admin admin) {
+		
+		return adminDAO.CreateAdmin(admin);
+	}
+
 }

@@ -11,7 +11,7 @@ public class AdminRowMapper implements RowMapper<Admin> {
 	public Admin mapRow(ResultSet rs, int rowNum) throws SQLException {
 		Admin admin=new Admin();
 		
-		admin.setId(rs.getString("id"));
+		admin.setId(rs.getInt("id"));
 		admin.setEmailId(rs.getString("email_id"));
 		admin.setContactNo(rs.getString("contact_no"));
 		admin.setPassword(rs.getString("password"));

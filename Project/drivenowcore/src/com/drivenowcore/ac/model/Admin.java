@@ -1,7 +1,7 @@
 package com.drivenowcore.ac.model;
 
 public class Admin {
-	private String id;
+	private int id;
 	private String emailId;
 	private String contactNo;
 	private String password;
@@ -22,10 +22,10 @@ public class Admin {
 	public Admin() {
 		
 	}
-	public String getId() {
+	public int getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public String getEmailId() {

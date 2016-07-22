@@ -1,4 +1,8 @@
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -76,22 +80,44 @@
 							</div>
 							<!-- /.box-header -->
 							<!-- form start -->
-							<form role="form">
+							<c:if test="${not empty view}">
+								<c:if test="${view =='error'}">
+									<c:if test="${response =='ERR:EMAILEXISTS'}">
+										<div class="err-msg-logs row clearfix" style="height: 70px">
+											<p class="alert alert-danger">Email ID already Exists</p>
+										</div>
+									</c:if>
+									<c:if test="${response =='ERR:PHONEEXISTS'}">
+										<div class="err-msg-logs row clearfix" style="height: 70px">
+											<p class="alert alert-danger">Email ID already Exists</p>
+										</div>
+									</c:if>
+									<c:if test="${response =='ERR:UNKNOWNERRON'}">
+										<div class="err-msg-logs row clearfix" style="height: 70px">
+											<p class="alert alert-danger">Unexpected Error Occurred</p>
+										</div>
+									</c:if>
+								</c:if>
+							</c:if>
+							
+							
+							<form:form role="form" modelAttribute="admin" action="addadmin"
+				method="post">
 								<div class="box-body">
 									<div class="form-group">
 										<label for="emailId">Email address</label> <input
 											type="email" class="form-control" id="emailId"
-											placeholder="Enter email" REQUIRED>
+											placeholder="Enter email" value=${admin.emailId} REQUIRED>
 									</div>
 									<div class="form-group">
 										<label for="fullName">Email address</label> <input
 											type="text" class="form-control" id="fullName"
-											placeholder="Enter Full Name" REQUIRED>
+											placeholder="Enter Full Name" value=${admin.fullName} REQUIRED>
 									</div>
 									<div class="form-group">
 										<label for="contactNo">Contact No</label> <input
 											type="text" class="form-control" id="contactNo"
-											placeholder="Enter Contact No" REQUIRED>
+											placeholder="Enter Contact No" value=${admin.contactNo} REQUIRED>
 									</div>
 									<div class="form-group">
 										<label for="password">Password</label> <input
@@ -100,21 +126,18 @@
 									</div>
 									<div class="form-group">
 										<label for="imageURL">Display Picture</label> <input
-											type="file" id="imageURL">
+											type="file" id="imageURL" disabled>
 
 										<p class="help-block">Select Image from local drive</p>
 									</div>
-									<div class="checkbox">
-										<label> <input type="checkbox"> Check me out
-										</label>
-									</div>
+									
 								</div>
 								<!-- /.box-body -->
 
 								<div class="box-footer">
 									<button type="submit" class="btn btn-primary">Submit</button>
 								</div>
-							</form>
+							</form:form>
 						</div>
 						<!-- /.box -->
 

@@ -11,5 +11,6 @@ public interface AdminService {
 	public Admin getAdminbyUserId(String UserId);
 	public Admin getAdminbyEmailId(String EmailId);
 	public String getAdminNamebyEmailId(String EmailId);
+	public String CreateAdmin(Admin admin);
 
 }
