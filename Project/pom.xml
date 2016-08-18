@@ -12,8 +12,10 @@
     <modules>
         <module>drivenowcore</module>
         <module>drivenowac</module>
+		<module>drivenowws</module>
     </modules>
-	<build>
+	
+<build>
 		<sourceDirectory>src</sourceDirectory>
 		<finalName>${project.artifactId}</finalName>
 		<outputDirectory>${CATALINA_HOME}/webapps/${project.artifactId}/${project.artifactId}</outputDirectory>
@@ -41,11 +43,12 @@
 				<configuration>
 					<url>http://localhost:8080</url>
 					<server>TomcatServer</server>
-					<path>/drivenow</path>
+					<path>/drivenowws	</path>
 					<username>admin</username>
 					<password>password</password>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
+	
 </project>
