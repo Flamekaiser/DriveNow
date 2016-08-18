@@ -10,7 +10,7 @@ import com.drivenowcore.ac.model.Admin;
 
 public class AdminDAOImpl implements AdminDAO {
 
-	@Autowired
+	//@Autowired
 	JdbcTemplate jdbcTemplate;
 	
 	@Override

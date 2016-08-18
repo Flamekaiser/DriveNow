@@ -26,7 +26,7 @@ import com.drivenowcore.ac.model.Admin;
 @Controller
 public class AdminController {
 	
-	@Autowired
+	//@Autowired
 	AdminService adminService;
 
 	@RequestMapping(value ={"/", "/welcome**"})

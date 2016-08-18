@@ -10,7 +10,7 @@ import com.drivenowcore.ac.model.Admin;
 
 public class AdminServiceImpl implements AdminService {
 
-	@Autowired
+	//@Autowired
 	AdminDAO adminDAO;
 	@Override
 	public ArrayList<Admin> getAdminList() {

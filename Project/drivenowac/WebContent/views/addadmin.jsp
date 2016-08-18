@@ -107,17 +107,17 @@
 									<div class="form-group">
 										<label for="emailId">Email address</label> <input
 											type="email" class="form-control" id="emailId"
-											placeholder="Enter email" value=${admin.emailId} REQUIRED>
+											placeholder="Enter email" value='${admin.emailId}' REQUIRED>
 									</div>
 									<div class="form-group">
 										<label for="fullName">Email address</label> <input
 											type="text" class="form-control" id="fullName"
-											placeholder="Enter Full Name" value=${admin.fullName} REQUIRED>
+											placeholder="Enter Full Name" value='${admin.fullName}' REQUIRED>
 									</div>
 									<div class="form-group">
 										<label for="contactNo">Contact No</label> <input
 											type="text" class="form-control" id="contactNo"
-											placeholder="Enter Contact No" value=${admin.contactNo} REQUIRED>
+											placeholder="Enter Contact No" value='${admin.contactNo}' REQUIRED>
 									</div>
 									<div class="form-group">
 										<label for="password">Password</label> <input
