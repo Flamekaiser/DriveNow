@@ -9,7 +9,7 @@
 	<groupId>drivenowws</groupId>
 	<artifactId>drivenowws</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<!-- <packaging>war</packaging> -->
+	<packaging>war</packaging>
 	<name>drivenowws</name>
 	<description>Web Service Module</description>
 	<properties>

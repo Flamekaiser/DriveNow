@@ -9,8 +9,8 @@
 	<groupId>com.flameka</groupId>
 	<artifactId>drvenowcore</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-<!-- 
-	<packaging>jar</packaging> -->
+
+	<packaging>jar</packaging>
 
 	<name>drivenowcore</name>
 	<description>DriveNow Core Module</description>
