@@ -1,12 +1,33 @@
 package com.drivenowcore.ac.model;
+import javax.persistence.Entity;  
+import javax.persistence.Id;  
+import javax.persistence.Table; 
+import javax.persistence.Column; 
+import javax.persistence.GeneratedValue; 
 
+@Entity  
+@Table(name= "admin")
 public class Admin {
+	
+	@Id @GeneratedValue
+	@Column(name = "id")
 	private int id;
+	
+	@Column(name = "email_id")
 	private String emailId;
+	
+	@Column(name = "contact_no")
 	private String contactNo;
+	
+	@Column(name = "password")
 	private String password;
+	
+	@Column(name = "full_name")
 	private String fullName;
+	
+	@Column(name = "image_url")
 	private String imageURL;
+	
 	public String getContactNo() {
 		return contactNo;
 	}

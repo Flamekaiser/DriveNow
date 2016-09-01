@@ -122,7 +122,6 @@
 	<build>
 		<sourceDirectory>src</sourceDirectory>
 		<finalName>${project.artifactId}</finalName>
-		<outputDirectory>${CATALINA_HOME}/webapps/${project.artifactId}/${project.artifactId}</outputDirectory>
 		<plugins>
 			<plugin>
 				<artifactId>maven-war-plugin</artifactId>
