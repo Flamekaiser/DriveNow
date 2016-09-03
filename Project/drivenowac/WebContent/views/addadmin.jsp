@@ -110,23 +110,23 @@
 											placeholder="Enter email" value='${admin.emailId}' REQUIRED>
 									</div>
 									<div class="form-group">
-										<label for="fullName">Email address</label> <input
+										<form:label for="fullName">Email address</form:label> <form:input
 											type="text" class="form-control" id="fullName"
-											placeholder="Enter Full Name" value='${admin.fullName}' REQUIRED>
+											placeholder="Enter Full Name" value='${admin.fullName}' REQUIRED></form:input>
 									</div>
 									<div class="form-group">
-										<label for="contactNo">Contact No</label> <input
+										<form:label for="contactNo">Contact No</form:label> <form:input
 											type="text" class="form-control" id="contactNo"
-											placeholder="Enter Contact No" value='${admin.contactNo}' REQUIRED>
+											placeholder="Enter Contact No" value='${admin.contactNo}' REQUIRED></form:input>
 									</div>
 									<div class="form-group">
-										<label for="password">Password</label> <input
+										<form:label for="password">Password</form:label> <form:input
 											type="password" class="form-control"
-											id="password" placeholder="Password" REQUIRED>
+											id="password" placeholder="Password" REQUIRED></form:input>
 									</div>
 									<div class="form-group">
-										<label for="imageURL">Display Picture</label> <input
-											type="file" id="imageURL" disabled>
+										<form:label for="imageURL">Display Picture</form:label> <form:input
+											type="file" id="imageURL" disabled></form:input>
 
 										<p class="help-block">Select Image from local drive</p>
 									</div>
@@ -135,7 +135,7 @@
 								<!-- /.box-body -->
 
 								<div class="box-footer">
-									<button type="submit" class="btn btn-primary">Submit</button>
+									<input type="submit" class="btn btn-primary">Submit</button>
 								</div>
 							</form:form>
 						</div>
