@@ -5,6 +5,7 @@
 		<groupId>com.flameka</groupId>
 		<artifactId>drivenow</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>..</relativePath>
 	</parent>
 	<groupId>drivenowws</groupId>
 	<artifactId>drivenowws</artifactId>
@@ -18,6 +19,7 @@
 		<logback.version>1.0.13</logback.version>
 		<slf4j.version>1.7.5</slf4j.version>
 		<jstl.version>1.2</jstl.version>
+	
 	</properties>
 	
 	<dependencies>
@@ -25,6 +27,7 @@
 			<groupId>com.flameka</groupId>
 			<artifactId>drivenowcore</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
+		
 		</dependency>
 
 
